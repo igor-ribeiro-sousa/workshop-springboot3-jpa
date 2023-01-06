@@ -83,13 +83,13 @@ public class User implements Serializable {
 		this.password = password;
 	}
 
+	public List<Order> getOrders() {
+		return orders;
+	}
+	
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
-	}
-
-	public List<Order> getOrders() {
-		return orders;
 	}
 	
 	@Override
@@ -104,8 +104,5 @@ public class User implements Serializable {
 		return Objects.equals(id, other.id);
 	}
 
-	
-	
-	
 	
 }
